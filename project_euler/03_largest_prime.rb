@@ -41,4 +41,4 @@ def prime_factors_short(num)
   end
 end
 
-p prime_factors_short(600851475143) #Finally runs!
+p prime_factors_short(600851475143) #Finally runs! Takes a REALLY LONG TIME. ~Day
