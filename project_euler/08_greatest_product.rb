@@ -12,4 +12,4 @@ def greatest_product(number_adjacent)
   largest_product
 end
 
-p greatest_product(13) # This takes a while, but it will run!
+p greatest_product(13)
