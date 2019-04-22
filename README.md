@@ -8,3 +8,4 @@ My solutions for various online practice problems.
 [Project_Euler]: ./project_euler
 [Exercism]: ./exercism
 [CodeEval]: ./codeeval
+[Codility]: ./codility
