@@ -1,8 +1,8 @@
 // Clarifying Questions:
 // 1. Do the numbers have to be returned in any order? Let's assume it has to be in ascending order
-// 2.
+// 2. What to do if there's no solution? Let's throw error, since the assumption is there will always be solution
 function twoSum(nums: number[], target: number): [number, number] {
-  const numberToIdx = {};
+  const numberToIdx: Record<number, number> = {};
   for (let idx = 0; idx < nums.length; idx++) {
     const currNum = nums[idx];
     const solutionNumber = target - currNum;
@@ -16,6 +16,9 @@ function twoSum(nums: number[], target: number): [number, number] {
 
   throw new Error("No two sum solution");
 }
+
+// This is O(n)
+
 let result = twoSum([2, 7, 11, 15], 9);
 console.log(result);
 console.log(JSON.stringify(result) === '[0,1]');
