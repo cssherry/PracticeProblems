@@ -1,19 +1,20 @@
 // Clarifying questions
 // 1. Will two linked lists be of the same length? No
 function addTwoNumbers(linkedList1, linkedList2) {
+    var _a, _b;
     var resultArray = [];
     var idx = 0;
-    var nextDigit = 0;
+    var carryNextDigit = 0;
     while (linkedList1[idx] !== undefined || linkedList2[idx] !== undefined) {
-        var firstNumber = linkedList1[idx] || 0;
-        var secondNumber = linkedList2[idx] || 0;
-        var total = firstNumber + secondNumber + nextDigit;
+        var firstNumber = (_a = linkedList1[idx]) !== null && _a !== void 0 ? _a : 0;
+        var secondNumber = (_b = linkedList2[idx]) !== null && _b !== void 0 ? _b : 0;
+        var total = firstNumber + secondNumber + carryNextDigit;
         resultArray.push(total % 10);
-        nextDigit = Math.floor(total / 10);
+        carryNextDigit = Math.floor(total / 10);
         idx += 1;
     }
-    if (nextDigit) {
-        resultArray.push(nextDigit);
+    if (carryNextDigit) {
+        resultArray.push(carryNextDigit);
     }
     return resultArray;
 }
