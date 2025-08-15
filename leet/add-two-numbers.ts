@@ -21,6 +21,9 @@ function addTwoNumbers(linkedList1:number[], linkedList2:number[]): number[] {
   return resultArray;
 }
 
+// Time complexity is O(max(m,n))
+// Solution for if reversed is to reverse the array first -- still O(max(m, n))
+
 let result = addTwoNumbers([2,4,3], [5,6,4]);
 console.log(result);
 console.log(JSON.stringify(result) === '[7,0,8]');
