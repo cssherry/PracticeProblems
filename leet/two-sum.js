@@ -1,6 +1,6 @@
 // Clarifying Questions:
 // 1. Do the numbers have to be returned in any order? Let's assume it has to be in ascending order
-// 2.
+// 2. What to do if there's no solution? Let's throw error, since the assumption is there will always be solution
 function twoSum(nums, target) {
     var numberToIdx = {};
     for (var idx = 0; idx < nums.length; idx++) {
@@ -16,6 +16,7 @@ function twoSum(nums, target) {
     }
     throw new Error("No two sum solution");
 }
+// This is O(n)
 var result = twoSum([2, 7, 11, 15], 9);
 console.log(result);
 console.log(JSON.stringify(result) === '[0,1]');
